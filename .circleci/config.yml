@@ -76,18 +76,9 @@ workflows:
             branches:
               only:
                 - main
-      - hold:
-          filters:
-            branches:
-              only:
-                - main
-          type: approval
-          requires:
-            - build
       - deploy:
           filters:
             branches:
               only:
                 - main
-          requires:
-            - hold
+          
